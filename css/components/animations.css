@@ -1,0 +1,23 @@
+/* Animation Performance Optimizations */
+.fade-up, .stagger-cards, .scale-in, .hover-lift, .hover-zoom {
+    will-change: transform, opacity;
+}
+
+/* Smooth transitions backup */
+.hover-lift {
+    transition: transform 0.3s ease;
+}
+
+/* Loading state */
+.page-loading {
+    opacity: 0;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

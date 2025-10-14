@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products - Raheem Cooling</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/pages/products.css" />
+    <link rel="stylesheet" href="css/components/footer.css" />
+    <!-- GSAP for Animations -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="js/simple-animation.js"></script>
+<!-- For Fav-Icon -->
+<link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+<link rel="manifest" href="favicon_io/site.webmanifest">
+
+
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="index.html">
+            <img src="assets/images/logo.png" alt="Raheem Cooling Logo" />
+          </a>
+        </div>
+        <div class="nav-menu" id="navMenu">
+          <ul class="nav-links">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="products.html" class="nav-link active"
+                >Products <span class="dropdown-arrow">▼</span></a
+              >
+              <ul class="dropdown-menu">
+                <li><a href="products.html" class="nav-link active">All Products</a></li>
+                <li><a href="split-ac.html">Split AC</a></li>
+                <li><a href="window-ac.html">Window AC</a></li>
+                <li><a href="cassette-ac.html">Cassette AC</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="gallery.html" class="nav-link">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a href="faq.html" class="nav-link">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a href="sitemap.html" class="nav-link">Site Map</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-visitor-counter">
+          <span>Visitors: <span id="visitorCount">1256</span></span>
+        </div>
+        <div class="nav-actions">
+          <!-- Account Dropdown -->
+          <div class="nav-action-item account-dropdown">
+            <button class="nav-action-btn" id="accountBtn">
+              <span class="action-icon">👤</span>
+            </button>
+            <div class="account-dropdown-menu">
+              <a href="login.html" class="dropdown-item">Login</a>
+              <a href="signup.html" class="dropdown-item">Sign Up</a>
+            </div>
+          </div>
+
+          <!-- Cart -->
+          <div class="nav-action-item">
+            <button class="nav-action-btn" id="cartBtn">
+              <span class="action-icon">🛒</span>
+              <span class="cart-count" id="cartCount">0</span>
+            </button>
+          </div>
+        </div>
+        <div class="hamburger" id="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Products Page Content -->
+    <main class="products-page">
+      <div class="container">
+        <div class="page-header">
+          <h1>Our Premium AC Products</h1>
+          <p>
+            Discover our complete range of energy-efficient air conditioning
+            solutions
+          </p>
+        </div>
+
+        <!-- Quick Category Navigation -->
+        <div class="category-nav">
+          <a href="split-ac.html" class="category-card">
+            <div class="category-icon">❄️</div>
+            <h3>Split AC</h3>
+            <p>Perfect for homes and offices</p>
+          </a>
+          <a href="window-ac.html" class="category-card">
+            <div class="category-icon">🏠</div>
+            <h3>Window AC</h3>
+            <p>Compact and affordable</p>
+          </a>
+          <a href="cassette-ac.html" class="category-card">
+            <div class="category-icon">🏢</div>
+            <h3>Cassette AC</h3>
+            <p>Commercial solutions</p>
+          </a>
+        </div>
+
+        <!-- Mobile Filters Toggle Button -->
+        <div class="mobile-filters-toggle" id="mobileFiltersToggle">
+          <button class="btn-primary filters-toggle-btn" id="filtersToggle">
+            <span>☰ Show Filters</span>
+            <span class="filter-badge" id="activeFilterCount">0</span>
+          </button>
+        </div>
+
+        <!-- Products Layout -->
+        <div class="products-layout">
+          <!-- Filters Sidebar -->
+          <aside class="filters-sidebar" id="filtersSidebar">
+            <div class="filters-header">
+              <h3>Filters</h3>
+              <div class="filter-actions">
+                <button class="clear-filters" id="clearFilters">
+                  Clear All
+                </button>
+                <button class="close-filters" id="closeFilters">✕</button>
+              </div>
+            </div>
+
+            <div class="filters-content">
+              <!-- AC Type Filter -->
+              <div class="filter-group">
+                <h4>AC Type</h4>
+                <div class="filter-options" id="typeFilters">
+                  <!-- Dynamically loaded -->
+                </div>
+              </div>
+
+              <!-- Brand Filter -->
+              <div class="filter-group">
+                <h4>Brand</h4>
+                <div class="filter-options" id="brandFilters">
+                  <!-- Dynamically loaded -->
+                </div>
+              </div>
+
+              <!-- Tonnage Filter -->
+              <div class="filter-group">
+                <h4>Tonnage</h4>
+                <div class="filter-options" id="tonnageFilters">
+                  <!-- Dynamically loaded -->
+                </div>
+              </div>
+
+              <!-- Color Filter -->
+              <div class="filter-group">
+                <h4>Color</h4>
+                <div class="filter-options" id="colorFilters">
+                  <!-- Dynamically loaded -->
+                </div>
+              </div>
+
+              <!-- Coverage Area Filter -->
+              <div class="filter-group">
+                <h4>Coverage Area</h4>
+                <div class="filter-options" id="coverageFilters">
+                  <!-- Dynamically loaded -->
+                </div>
+              </div>
+
+              <!-- Price Range Filter -->
+              <div class="filter-group">
+                <h4>Price Range</h4>
+                <div class="filter-options" id="priceFilters">
+                  <!-- Dynamically loaded -->
+                </div>
+              </div>
+            </div>
+
+            <div class="filter-apply">
+              <button class="btn-primary apply-filters-btn" id="applyFilters">
+                Apply Filters
+              </button>
+            </div>
+          </aside>
+
+          <!-- Products Section -->
+          <section class="products-section">
+            <div class="products-header">
+              <div class="results-info">
+                <h3>All Products</h3>
+                <span id="resultsCount">Loading...</span>
+              </div>
+              <div class="sort-options">
+                <label for="sortSelect">Sort by:</label>
+                <select id="sortSelect">
+                  <option value="featured">Featured</option>
+                  <option value="name-asc">Name: A to Z</option>
+                  <option value="name-desc">Name: Z to A</option>
+                  <option value="price-asc">Price: Low to High</option>
+                  <option value="price-desc">Price: High to Low</option>
+                  <option value="rating-desc">Highest Rated</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid" id="productsGrid">
+              <!-- Products loaded dynamically -->
+            </div>
+            
+
+            <!-- Pagination Container -->
+            <div class="pagination-container" id="paginationContainer" style="display: none;">
+                <div class="pagination-info" id="paginationInfo"></div>
+                <div class="pagination">
+                    <button class="pagination-btn prev-btn" id="prevBtn" disabled>Previous</button>
+                    <div class="pagination-pages" id="paginationPages"></div>
+                    <button class="pagination-btn next-btn" id="nextBtn">Next</button>
+                </div>
+            </div>
+
+            <!-- Loading State -->
+            <div class="loading-state" id="loadingState">
+            
+            <!-- Loading State -->
+            <div class="loading-state" id="loadingState">
+              <div class="loading-spinner"></div>
+              <p>Loading products...</p>
+            </div>
+
+            <!-- No Results State -->
+            <div class="no-results" id="noResults" style="display: none">
+              <h3>No products found</h3>
+              <p>Try adjusting your filters or search criteria</p>
+              <button class="btn-secondary" id="resetFilters">
+                Reset Filters
+              </button>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <!-- Product Modal -->
+    <div class="modal" id="productModal">
+      <div class="modal-content">
+        <button class="modal-close" id="modalClose">&times;</button>
+        <div class="modal-body" id="modalBody">
+          <!-- Product details loaded dynamically -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">↑</button>
+
+    <!-- Footer -->
+    <footer class="footer">
+    <div class="container">
+        <!-- Main Footer Content -->
+        <div class="footer-main">
+            <!-- Company Info -->
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="assets/images/logo.png" alt="Raheem Cooling">
+                </div>
+                <p class="footer-description">
+                    Raheem Cooling provides premium air conditioning solutions with over 15 years of expertise. 
+                    We deliver quality, reliability, and exceptional customer service.
+                </p>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Facebook">
+                        <span class="social-icon">📘</span>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <span class="social-icon">🐦</span>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <span class="social-icon">📷</span>
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <span class="social-icon">💼</span>
+                    </a>
+                    <a href="#" class="social-link" aria-label="YouTube">
+                        <span class="social-icon">📺</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-section">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="products.html">All Products</a></li>
+                    <li><a href="gallery.html">Installation Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="sitemap.html">Site Map</a></li>
+                </ul>
+            </div>
+
+            <!-- Products -->
+            <div class="footer-section">
+                <h3 class="footer-title">Our Products</h3>
+                <ul class="footer-links">
+                    <li><a href="split-ac.html">Split AC Systems</a></li>
+                    <li><a href="window-ac.html">Window AC Units</a></li>
+                    <li><a href="cassette-ac.html">Cassette AC Systems</a></li>
+                    <li><a href="products.html#commercial">Commercial Solutions</a></li>
+                    <li><a href="products.html#residential">Residential AC</a></li>
+                    <li><a href="products.html#energy-efficient">Energy Efficient Models</a></li>
+                </ul>
+            </div>
+
+            <!-- Services -->
+            <div class="footer-section">
+                <h3 class="footer-title">Our Services</h3>
+                <ul class="footer-links">
+                    <li><a href="contact.html#installation">AC Installation</a></li>
+                    <li><a href="contact.html#maintenance">Maintenance Services</a></li>
+                    <li><a href="contact.html#repair">Repair Services</a></li>
+                    <li><a href="contact.html#emergency">Emergency Support</a></li>
+                    <li><a href="contact.html#consultation">Free Consultation</a></li>
+                    <li><a href="contact.html#warranty">Warranty Services</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-section">
+                <h3 class="footer-title">Contact Info</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <div>
+                            <strong>Head Office</strong>
+                            <p>Saeedabad, Baldia Town,<br> Karachi, Pakistan</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <div>
+                            <strong>Call Us</strong>
+                            <p>+92 3181226014<br>+92 3112832167</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">✉️</span>
+                        <div>
+                            <strong>Email Us</strong>
+                            <p>sales@raheemcooling.com<br>support@raheemcooling.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">🕒</span>
+                        <div>
+                            <strong>Business Hours</strong>
+                            <p>Mon-Sun: 7:00 AM - 10:00 PM<br>Emergency: 24/7 Available</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Newsletter Section -->
+        <div class="newsletter-section">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h3>Stay Cool with Our Updates</h3>
+                    <p>Subscribe to our newsletter for the latest products, offers, and cooling tips</p>
+                </div>
+                <form class="newsletter-form" id="newsletterForm">
+                    <div class="input-group">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit" class="btn-primary">
+                            <span>Subscribe</span>
+                            <span class="loading-spinner" style="display: none;">⏳</span>
+                        </button>
+                    </div>
+                    <div class="newsletter-message" id="newsletterMessage"></div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="trust-badges">
+            <div class="trust-item">
+                <span class="trust-icon">⭐</span>
+                <span>15+ Years Experience</span>
+            </div>
+            <div class="trust-item">
+                <span class="trust-icon">👍</span>
+                <span>10,000+ Happy Customers</span>
+            </div>
+            <div class="trust-item">
+                <span class="trust-icon">⚡</span>
+                <span>24/7 Emergency Service</span>
+            </div>
+            <div class="trust-item">
+                <span class="trust-icon">🏆</span>
+                <span>Certified Technicians</span>
+            </div>
+            <div class="trust-item">
+                <span class="trust-icon">💯</span>
+                <span>Quality Guaranteed</span>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <div class="copyright">
+                    <p>&copy; 2024 Raheem Cooling. All rights reserved.</p>
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="warranty.html">Warranty</a>
+                    <a href="contact.html">Support</a>
+                </div>
+                <div class="payment-methods">
+                    <span class="payment-text">We Accept:</span>
+                    <div class="payment-icons">
+                        <span class="payment-icon">💳</span>
+                        <span class="payment-icon">🏦</span>
+                        <span class="payment-icon">📱</span>
+                        <span class="payment-icon">💵</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- Bottom Sticky Ticker -->
+    <div class="sticky-ticker">
+      <div class="ticker-content">
+        <span id="currentDate"></span> | <span id="currentTime"></span> |
+        <span id="userLocation">Detecting location...</span>
+      </div>
+    </div>
+<script src="js/components/cart.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/pages/products.js"></script>
+    <script src="js/components/footer.js"></script>
+    
+  </body>
+</html>

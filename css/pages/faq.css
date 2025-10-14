@@ -1,0 +1,322 @@
+/* FAQ Page Styles */
+.faq-page {
+    padding: 40px 0 80px;
+    min-height: 100vh;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-header h1 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    font-size: 1.1rem;
+    color: var(--light-text);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* FAQ Search */
+.faq-search {
+    margin-bottom: 40px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 15px 50px 15px 20px;
+    border: 2px solid var(--border-color);
+    border-radius: 25px;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.search-container input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+.search-container button {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 8px;
+    color: var(--light-text);
+}
+
+.search-results {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: var(--light-text);
+}
+
+/* FAQ Categories */
+.faq-categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.category-btn {
+    padding: 10px 20px;
+    background: var(--white);
+    border: 2px solid var(--border-color);
+    border-radius: 25px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.category-btn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.category-btn.active {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* FAQ Accordion */
+.faq-accordion {
+    max-width: 800px;
+    margin: 0 auto 60px;
+}
+
+.faq-item {
+    background: var(--white);
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.faq-item:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+    padding: 20px 60px 20px 25px;
+    cursor: pointer;
+    position: relative;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+    transition: var(--transition);
+}
+
+.faq-question:hover {
+    color: var(--primary-color);
+}
+
+.faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    font-weight: 300;
+    transition: var(--transition);
+}
+
+.faq-item.active .faq-question::after {
+    content: '−';
+    color: var(--primary-color);
+}
+
+.faq-answer {
+    padding: 0 25px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    padding: 0 25px 25px;
+    max-height: 1000px;
+}
+
+.faq-answer-content {
+    border-top: 1px solid var(--border-color);
+    padding-top: 20px;
+    line-height: 1.6;
+}
+
+.faq-answer-content p {
+    margin-bottom: 15px;
+}
+
+.faq-answer-content p:last-child {
+    margin-bottom: 0;
+}
+
+.faq-meta {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+    font-size: 0.8rem;
+    color: var(--light-text);
+}
+
+.faq-category {
+    background: var(--background-color);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+/* FAQ CTA */
+.faq-cta {
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 8px;
+    color: var(--white);
+}
+
+.faq-cta h2 {
+    color: var(--white);
+    margin-bottom: 15px;
+}
+
+.faq-cta p {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cta-buttons .btn-primary {
+    background: var(--white);
+    color: var(--primary-color);
+}
+
+.cta-buttons .btn-primary:hover {
+    background: var(--background-color);
+}
+
+.cta-buttons .btn-secondary {
+    border-color: var(--white);
+    color: var(--white);
+}
+
+.cta-buttons .btn-secondary:hover {
+    background: var(--white);
+    color: var(--primary-color);
+}
+
+/* No Results State */
+.no-results {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--light-text);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .faq-page {
+        padding: 20px 0 60px;
+    }
+
+    .faq-categories {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+
+    .faq-question {
+        padding: 15px 50px 15px 20px;
+        font-size: 1rem;
+    }
+
+    .faq-item.active .faq-answer {
+        padding: 0 20px 20px;
+    }
+
+    .faq-cta {
+        padding: 30px 20px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-buttons a {
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .faq-question {
+        padding: 12px 45px 12px 15px;
+        font-size: 0.95rem;
+    }
+
+    .faq-question::after {
+        right: 15px;
+    }
+
+    .faq-item.active .faq-answer {
+        padding: 0 15px 15px;
+    }
+
+    .faq-answer-content {
+        padding-top: 15px;
+    }
+
+    .faq-meta {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+/* For underline */
+.page-header  h1  {
+            
+             margin-bottom: 26px; 
+            position: relative;
+            display: inline-block;
+        } 
+        
+        .page-header h1:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 4px;
+            background:linear-gradient(140deg,rgba(0, 102, 204, 1) 0%, rgba(90, 164, 237, 1) 41%, rgba(110, 177, 245, 1) 67%, rgba(0, 102, 204, 1) 100%) ;
+            border-radius: 2px;
+        }

@@ -1,0 +1,93 @@
+.intro-content h2 {
+  color: var(--secondary-color);
+  font-size: 2rem;
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
+}
+.intro-content h2:after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 4px;
+  background: linear-gradient(
+    140deg,
+    rgba(0, 77, 153, 1) 0%,
+    rgba(90, 164, 237, 1) 41%,
+    rgba(110, 177, 245, 1) 67%,
+    rgba(0, 77, 153, 1) 100%
+  );
+  border-radius: 2px;
+}
+.results-info h2 {
+  color: var(--secondary-color);
+  font-size: 2rem;
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
+}
+.results-info h2:after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 4px;
+  background: linear-gradient(
+    140deg,
+    rgba(0, 77, 153, 1) 0%,
+    rgba(90, 164, 237, 1) 41%,
+    rgba(110, 177, 245, 1) 67%,
+    rgba(0, 77, 153, 1) 100%
+  );
+  border-radius: 2px;
+}
+/* User Rating Styles */
+.rating-edit-section {
+    margin: 15px 0;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.rating-edit-section label {
+    font-weight: 600;
+    margin-right: 10px;
+    color: var(--text-color);
+}
+
+.user-rating-select {
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background: var(--white);
+    font-size: 0.9rem;
+    margin-right: 10px;
+}
+
+.user-rating-select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.current-user-rating {
+    font-size: 0.8rem;
+    color: var(--light-text);
+    font-style: italic;
+}
+
+/* Add these animations to your CSS */
+@keyframes slideIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideOut {
+    from { transform: translateX(0); opacity: 1; }
+    to { transform: translateX(100%); opacity: 0; }
+}

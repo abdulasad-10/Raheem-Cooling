@@ -1,0 +1,14 @@
+
+{
+    "types": ["split", "window", "cassette"],
+    "brands": ["PEL", "Haier", "Daikin", "LG", "Samsung" , "Blue Star" ,"Mitsubishi" ,"Hitachi" ,"Kenwood", "Dawlance", "Orient","TCL","Gree", "Panasonic", "Acson"],
+    "tonnage": ["1 Ton", "1.5 Ton", "2 Ton", "2.5 Ton", "3 Ton","3.5 Ton","5 Ton"],
+    "colors": ["White", "Silver", "Black", "Gray","Gold","Beige"],
+    "coverageArea": ["120 sq ft", "180 sq ft", "240 sq ft", "300 sq ft", "360 sq ft", "420 sq ft", "600 sq ft"],
+    "priceRanges": [
+        {"min": 0, "max": 30000, "label": "Under Rs-30,000"},
+        {"min": 30000, "max": 50000, "label": "Rs-30,000 - Rs-50,000"},
+        {"min": 50000, "max": 70000, "label": "Rs-50,000 - Rs-70,000"},
+        {"min": 70000, "max": 100000, "label": "Rs-70,000 - Rs-100,000"}
+    ]
+}

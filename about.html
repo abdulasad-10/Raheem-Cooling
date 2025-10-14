@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Raheem Cooling | Premium AC Solutions Since 2008</title>
+    <meta name="description" content="Learn about Raheem Cooling's journey, mission, and commitment to providing premium air conditioning solutions for over 15 years.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages/about.css">
+    <link rel="stylesheet" href="css/components/footer.css">
+    <!-- GSAP for Animations -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="js/simple-animation.js"></script>
+<!-- For Fav-Icon -->
+<link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+<link rel="manifest" href="favicon_io/site.webmanifest">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="assets/images/logo.png" alt="Raheem Cooling Logo">
+                </a>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-links">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="products.html" class="nav-link">Products <span class="dropdown-arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="products.html">All Products</a></li>
+                            <li><a href="split-ac.html">Split AC</a></li>
+                            <li><a href="window-ac.html">Window AC</a></li>
+                            <li><a href="cassette-ac.html">Cassette AC</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link active">About Us</a></li>
+                    <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+                    <li class="nav-item"><a href="sitemap.html" class="nav-link">Site Map</a></li>
+                </ul>
+            </div>
+            <div class="nav-visitor-counter">
+                <span>Visitors: <span id="visitorCount">1256</span></span>
+            </div>
+            <div class="nav-actions">
+          <!-- Account Dropdown -->
+          <div class="nav-action-item account-dropdown">
+            <button class="nav-action-btn" id="accountBtn">
+              <span class="action-icon">👤</span>
+            </button>
+            <div class="account-dropdown-menu">
+              <a href="login.html" class="dropdown-item">Login</a>
+              <a href="signup.html" class="dropdown-item">Sign Up</a>
+            </div>
+          </div>
+
+          <!-- Cart -->
+          <div class="nav-action-item">
+            <button class="nav-action-btn" id="cartBtn">
+              <span class="action-icon">🛒</span>
+              <span class="cart-count" id="cartCount">0</span>
+            </button>
+          </div>
+        </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Us Page Content -->
+    <main class="about-page">
+        <!-- Hero Section -->
+        <section class="about-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>About Raheem Cooling</h1>
+                    <p class="hero-subtitle">Providing Premium Air Conditioning Solutions Since 1998</p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">27+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">10,000+</span>
+                            <span class="stat-label">Happy Customers</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Store</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Story Section -->
+        <section class="our-story">
+            <div class="container">
+                <div class="story-grid">
+                    <div class="story-content">
+                        <h2>Our Story</h2>
+                        <p>Founded in 1998 by Mr. Raheem Ahmed, Raheem Cooling began as a small family business with a vision to provide reliable and efficient air conditioning solutions to the local community. What started as a modest operation with just two technicians has grown into one of the region's most trusted HVAC service providers.</p>
+                        
+                        <p>Over the years, we've expanded our services to include residential and commercial AC installations, maintenance, and repairs. Our commitment to quality workmanship and customer satisfaction has been the driving force behind our growth and success.</p>
+                        
+                        <div class="milestone-timeline">
+                            <div class="milestone">
+                                <span class="year">1998</span>
+                                <span class="event">Company Founded</span>
+                            </div>
+                            <div class="milestone">
+                                <span class="year">2010</span>
+                                <span class="event">Expanded to Commercial Services</span>
+                            </div>
+                            <div class="milestone">
+                                <span class="year">2015</span>
+                                <span class="event">Opened Second Location</span>
+                            </div>
+                            <div class="milestone">
+                                <span class="year">2020</span>
+                                <span class="event">Reached 10,000+ Customers</span>
+                            </div>
+                            <div class="milestone">
+                                <span class="year">2023</span>
+                                <span class="event">Premium Partner with Raheem</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-image">
+                        <div class="image-placeholder">
+                            <span>Founder & Team Photo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission & Vision Section -->
+        <section class="mission-vision">
+            <div class="container">
+                <div class="mv-grid">
+                    <div class="mv-card">
+                        <div class="mv-icon">🎯</div>
+                        <h3>Our Mission</h3>
+                        <p>To provide innovative, energy-efficient cooling solutions that enhance comfort while reducing environmental impact. We strive to deliver exceptional service quality and build lasting relationships with our customers through reliability and trust.</p>
+                    </div>
+                    <div class="mv-card">
+                        <div class="mv-icon">🔭</div>
+                        <h3>Our Vision</h3>
+                        <p>To be the leading provider of premium air conditioning solutions in the region, recognized for our technical expertise, customer-centric approach, and commitment to sustainable cooling technologies.</p>
+                    </div>
+                    <div class="mv-card">
+                        <div class="mv-icon">💎</div>
+                        <h3>Our Values</h3>
+                        <p>Quality, Integrity, Innovation, and Customer Satisfaction. These core values guide every aspect of our business, from product selection to installation and after-sales support.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="why-choose-us">
+            <div class="container">
+                <h2>Why Choose Raheem Cooling?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">👨‍🔧</div>
+                        <h4>Expert Technicians</h4>
+                        <p>Our certified technicians have extensive training and experience in handling all types of AC systems.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h4>Energy Efficient</h4>
+                        <p>We prioritize energy-efficient solutions that save you money while being environmentally friendly.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🛠️</div>
+                        <h4>Quality Products</h4>
+                        <p>We partner with leading brands like Rheem to ensure you get reliable and durable AC systems.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⏱️</div>
+                        <h4>Quick Response</h4>
+                        <p>Emergency services available with quick response times to address urgent cooling needs.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💰</div>
+                        <h4>Competitive Pricing</h4>
+                        <p>Transparent pricing with no hidden costs, offering great value for premium quality service.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📞</div>
+                        <h4>24/7 Support</h4>
+                        <p>Round-the-clock customer support to ensure your comfort is never compromised.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="team-section">
+            <div class="container">
+                <h2>Meet Our Leadership Team</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <div class="photo-placeholder">RA</div>
+                        </div>
+                        <h4>Raheem Ahmed</h4>
+                        <p class="member-role">Founder & CEO</p>
+                        <p class="member-bio">With over 20 years of experience in HVAC industry, Raheem leads our company with vision and expertise.</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <div class="photo-placeholder">SA</div>
+                        </div>
+                        <h4>Sarah Johnson</h4>
+                        <p class="member-role">Technical Director</p>
+                        <p class="member-bio">Certified HVAC engineer with specialization in energy-efficient cooling systems and smart technology.</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <div class="photo-placeholder">MJ</div>
+                        </div>
+                        <h4>Mike Chen</h4>
+                        <p class="member-role">Operations Manager</p>
+                        <p class="member-bio">Oversees our installation teams and ensures smooth project execution and quality control.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section class="certifications">
+            <div class="container">
+                <h2>Our Certifications & Partnerships</h2>
+                <div class="certs-grid">
+                    <div class="cert-card">
+                        <div class="cert-logo">RHEEM</div>
+                        <h4>Premium Partner</h4>
+                        <p>Authorized distributor and service provider for Rheem air conditioning systems.</p>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-logo">HVAC</div>
+                        <h4>Certified Technicians</h4>
+                        <p>All our technicians are certified by recognized HVAC training institutions.</p>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-logo">ISO</div>
+                        <h4>Quality Standards</h4>
+                        <p>Adherence to international quality standards in all our services and operations.</p>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-logo">EPA</div>
+                        <h4>Environment Compliant</h4>
+                        <p>Certified handling of refrigerants and environmentally responsible practices.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="about-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Experience Premium Cooling?</h2>
+                    <p>Join thousands of satisfied customers who trust Raheem Cooling for their air conditioning needs.</p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn-primary">Get Free Consultation</a>
+                        <a href="tel:+15551234567" class="btn-secondary">Call Us Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">↑</button>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <!-- Main Footer Content -->
+        <div class="footer-main">
+            <!-- Company Info -->
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="assets/images/logo.png" alt="Raheem Cooling">
+                </div>
+                <p class="footer-description">
+                    Raheem Cooling provides premium air conditioning solutions with over 15 years of expertise. 
+                    We deliver quality, reliability, and exceptional customer service.
+                </p>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Facebook">
+                        <span class="social-icon">📘</span>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <span class="social-icon">🐦</span>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <span class="social-icon">📷</span>
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <span class="social-icon">💼</span>
+                    </a>
+                    <a href="#" class="social-link" aria-label="YouTube">
+                        <span class="social-icon">📺</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-section">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="products.html">All Products</a></li>
+                    <li><a href="gallery.html">Installation Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="sitemap.html">Site Map</a></li>
+                </ul>
+            </div>
+
+            <!-- Products -->
+            <div class="footer-section">
+                <h3 class="footer-title">Our Products</h3>
+                <ul class="footer-links">
+                    <li><a href="split-ac.html">Split AC Systems</a></li>
+                    <li><a href="window-ac.html">Window AC Units</a></li>
+                    <li><a href="cassette-ac.html">Cassette AC Systems</a></li>
+                    <li><a href="products.html#commercial">Commercial Solutions</a></li>
+                    <li><a href="products.html#residential">Residential AC</a></li>
+                    <li><a href="products.html#energy-efficient">Energy Efficient Models</a></li>
+                </ul>
+            </div>
+
+            <!-- Services -->
+            <div class="footer-section">
+                <h3 class="footer-title">Our Services</h3>
+                <ul class="footer-links">
+                    <li><a href="contact.html#installation">AC Installation</a></li>
+                    <li><a href="contact.html#maintenance">Maintenance Services</a></li>
+                    <li><a href="contact.html#repair">Repair Services</a></li>
+                    <li><a href="contact.html#emergency">Emergency Support</a></li>
+                    <li><a href="contact.html#consultation">Free Consultation</a></li>
+                    <li><a href="contact.html#warranty">Warranty Services</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-section">
+                <h3 class="footer-title">Contact Info</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <div>
+                            <strong>Head Office</strong>
+                            <p>Saeedabad, Baldia Town,<br> Karachi, Pakistan</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <div>
+                            <strong>Call Us</strong>
+                            <p>+92 3181226014<br>+92 3112832167</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">✉️</span>
+                        <div>
+                            <strong>Email Us</strong>
+                            <p>sales@raheemcooling.com<br>support@raheemcooling.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">🕒</span>
+                        <div>
+                            <strong>Business Hours</strong>
+                            <p>Mon-Sun: 7:00 AM - 10:00 PM<br>Emergency: 24/7 Available</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Newsletter Section -->
+        <div class="newsletter-section">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h3>Stay Cool with Our Updates</h3>
+                    <p>Subscribe to our newsletter for the latest products, offers, and cooling tips</p>
+                </div>
+                <form class="newsletter-form" id="newsletterForm">
+                    <div class="input-group">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit" class="btn-primary">
+                            <span>Subscribe</span>
+                            <span class="loading-spinner" style="display: none;">⏳</span>
+                        </button>
+                    </div>
+                    <div class="newsletter-message" id="newsletterMessage"></div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="trust-badges">
+            <div class="trust-item">
+                <span class="trust-icon">⭐</span>
+                <span>15+ Years Experience</span>
+            </div>
+            <div class="trust-item">
+                <span class="trust-icon">👍</span>
+                <span>10,000+ Happy Customers</span>
+            </div>
+            <div class="trust-item">
+                <span class="trust-icon">⚡</span>
+                <span>24/7 Emergency Service</span>
+            </div>
+            <div class="trust-item">
+                <span class="trust-icon">🏆</span>
+                <span>Certified Technicians</span>
+            </div>
+            <div class="trust-item">
+                <span class="trust-icon">💯</span>
+                <span>Quality Guaranteed</span>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <div class="copyright">
+                    <p>&copy; 2024 Raheem Cooling. All rights reserved.</p>
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="warranty.html">Warranty</a>
+                    <a href="contact.html">Support</a>
+                </div>
+                <div class="payment-methods">
+                    <span class="payment-text">We Accept:</span>
+                    <div class="payment-icons">
+                        <span class="payment-icon">💳</span>
+                        <span class="payment-icon">🏦</span>
+                        <span class="payment-icon">📱</span>
+                        <span class="payment-icon">💵</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+    <!-- Bottom Sticky Ticker -->
+    <div class="sticky-ticker">
+        <div class="ticker-content">
+            <span id="currentDate"></span> | 
+            <span id="currentTime"></span> | 
+            <span id="userLocation">Detecting location...</span>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/pages/about.js"></script>
+    <script src="js/components/footer.js"></script>
+</body>
+</html>
