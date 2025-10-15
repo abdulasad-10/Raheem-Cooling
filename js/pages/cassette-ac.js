@@ -25,7 +25,7 @@ function initializeSplitACPage() {
     setupEventListeners();
     setupMobileFilters();
 }
-f
+
 function loadSplitACProducts() {
     fetch('data/products.json')
         .then(response => response.json())
